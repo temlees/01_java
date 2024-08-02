@@ -13,6 +13,26 @@ public class Application {
         * %= : 왼쪽의 피연산자에 오른쪽의 피연산자를 나눈 나머지 결과 대입
         * */
 
+        int num = 12;
+        System.out.println(num);
+        System.out.println("num = " + num);
+
+        // 3증가
+        num += 3;
+        System.out.println("num = " + num);
+        
+        //5로 나눈 나머지값
+        num %= 5;
+        System.out.println("num = " + num);
+
+        System.out.println("------------");
+        num = 12;
+        //num = num +0.1;
+        num *= 4.1;
+        System.out.println("num = " + num);
+
+
+
 
     }//main
 }//class
