@@ -14,6 +14,8 @@ public class Application04 {
         char gender ='남';
 
         app4.testMethod(name,age,gender);
+
+
         
 
     }//main
