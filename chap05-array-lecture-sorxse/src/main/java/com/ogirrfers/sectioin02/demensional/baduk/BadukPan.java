@@ -34,7 +34,7 @@ public class BadukPan {
             System.out.println("열을 입력해 주세요 (1~19):");
             int col = sc.nextInt();
 
-            //위치 유효성 확인
+            //위치 유효성 확인 -1을 해주는 이유는 인덱스 번호가 0부터 시작하기 때문에
             if(row >=1 && row<=19 && col >=1 && col<=19 && badukBoard[row-1][col-1] =='.'){
                         badukBoard[row-1][col-1] = currentPlayer;
 
@@ -49,7 +49,7 @@ public class BadukPan {
                 System.out.println("잘못된 위치입니다");
                 continue;
             }
-        }
+        }//while
 
     }
 
