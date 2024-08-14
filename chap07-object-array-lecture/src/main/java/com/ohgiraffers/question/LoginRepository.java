@@ -4,6 +4,7 @@ public class LoginRepository {
 
     private final static UserDTO [] user = new UserDTO[10];
 
+    //전역변수는 0으로 초기화됨
     private static int count;
 
     public static void gaip(String id,String name,int pwd,int pwdOK){
