@@ -8,7 +8,7 @@ public class Application {
 Scanner sc = new Scanner(System.in);
 MemberService memberService;
 MemberDTO memberDTO = new MemberDTO();
-SnsAuth auth;
+
 
 while(true){
     System.out.println("로그인 프로그램");
