@@ -59,12 +59,11 @@ public class Movie {
 
    @Override
    public String toString() {
-      return "Movie{" +
-              "title='" + title + '\'' +
-              ", runTime='" + runTime + '\'' +
-              ", 남은좌석수=" + (seat -reservationSeat)+
-
-              '}';
+      return
+              "영화 제목 =" + title +
+              " 영화 시간=" + runTime +
+              ", 남은좌석수= " + (seat -reservationSeat)
+              ;
    }
 
 

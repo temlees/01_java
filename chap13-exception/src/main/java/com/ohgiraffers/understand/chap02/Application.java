@@ -14,13 +14,15 @@ public class Application {
         System.out.println("현재 상영중인 영화 목록 ");
         movieTheater.listView();
 
-        int choice = sc.nextInt();
+
        loop: while(true){
             System.out.println("1. 특정 영화 예매, 2.상영중인 영화 목록조회 3.프로그램종료");
+           int choice = sc.nextInt();
             switch(choice){
                 case 1 :  movieTheater.specificMovie(); break;
                 case 2:   movieTheater.listView(); break;
-                case 3:  break loop;
+                case 3:
+                    System.out.println("프로그램 종료");break loop;
                 default:
                     System.out.println("잘못된 번호 입력");
             }

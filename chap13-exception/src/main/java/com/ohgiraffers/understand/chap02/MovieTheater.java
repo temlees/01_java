@@ -41,7 +41,7 @@ public class MovieTheater {
     }
 
     //특정영화 예매 메소드
-    public void specificMovie() {
+    /*public void specificMovie() {
         System.out.println("어떤 영화를 예매하시겠습니까 ?");
         Movie newMovie = new Movie();
         sc.nextLine();
@@ -56,5 +56,42 @@ public class MovieTheater {
         }
         System.out.println("예매가 완료되었습니다");
 
+    }*/
+    public void specificMovie() {
+        System.out.println("어떤 영화를 예매하시겠습니까?");
+        String title = sc.nextLine();  // 영화 제목 입력 받기
+
+        boolean found = false;  // 영화가 목록에 있는지 확인하는 플래그
+
+        for (Movie movie : movies) {
+            if (movie.getTitle().equals(title)) {
+                // 영화가 목록에 있는 경우 좌석 수 조정
+                if (movie.getSeat() > 0) {
+                    movie.setSeat(movie.getSeat() - 1);
+                    movie.setReservationSeat(movie.getReservationSeat() + 1);
+                    System.out.println("남은 좌석은 " + movie.getSeat() + "석 입니다.");
+                    found = true;
+                    break;  // 영화가 찾으면 루프를 종료
+                } else {
+                    System.out.println("해당 영화의 좌석이 모두 예약되었습니다.");
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("해당 제목의 영화를 찾을 수 없습니다.");
+        } else {
+            System.out.println("예매가 완료되었습니다.");
+        }
     }
+
+   /* // DataClass에서 ArrayList 가져오기
+    DataClass dataClass = new DataClass();
+    ArrayList<String> dataList = dataClass.getData();
+
+    // ReceiverClass에 ArrayList 전달
+    ReceiverClass receiverClass = new ReceiverClass();
+        receiverClass.receiveData(dataList);*/
 }
